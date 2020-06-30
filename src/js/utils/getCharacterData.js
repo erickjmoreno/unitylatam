@@ -2,10 +2,10 @@ async function checkAccessToken(apiData) {
 	const { client_id, client_secret } = apiData;
 
 	const access_token = localStorage.getItem("access_token");
-	const expiration_date = localStorage.getItem("access_token_expiration");
+	const expiration_date = localStorage.getItem("access_token_expiration_string");
 
 	const now = new Date();
-	const expiration = expiration_date || now;
+	const expiration = new Date(JSON.parse(expiration_date)) || now;
 	if (now < expiration && !!access_token) return access_token;
 
 	const payload = {
@@ -22,7 +22,7 @@ async function checkAccessToken(apiData) {
 	now.setSeconds(responseJSON.expires_in);
 
 	console.log("Se actualizara Access Token");
-	localStorage.setItem("access_token_expiration", now);
+	localStorage.setItem("access_token_expiration_string", JSON.stringify(now));
 	localStorage.setItem("access_token", responseJSON.access_token);
 
 	return responseJSON.access_token;
@@ -34,7 +34,7 @@ export default async function getCharacterData(args) {
 	const access_token = await checkAccessToken(apiData);
 	const { characterRealm, characterName } = formData;
 	const newAPIBlizzUrl = `https://us.api.blizzard.com/profile/wow/character/${characterRealm.toLowerCase()}/${characterName.toLowerCase()}`;
-	const ioUrl = `https://raider.io/api/v1/characters/profile?region=us&realm=${characterRealm.toLowerCase()}&name=${characterName.toLowerCase()}&fields=gear%2Cmythic_plus_weekly_highest_level_runs%2Cmythic_plus_scores%2Cmythic_plus_best_runs%2Cmythic_plus_ranks`;
+	const ioUrl = `https://raider.io/api/v1/characters/profile?region=us&realm=${characterRealm.toLowerCase()}&name=${characterName}&fields=gear%2Cmythic_plus_weekly_highest_level_runs%2Cmythic_plus_scores%2Cmythic_plus_best_runs%2Cmythic_plus_ranks`;
 	const blizzEquipmentDataUrl = `${newAPIBlizzUrl}/equipment?namespace=profile-us&locale=en_US&access_token=${access_token}`;
 	const blizCharacterDataUrl = `${newAPIBlizzUrl}?namespace=profile-us&locale=en_US&access_token=${access_token}`;
 
@@ -43,13 +43,13 @@ export default async function getCharacterData(args) {
 
 	if (blizzData.status !== 200) {
 		console.error(blizzData.status);
-		alert(`Error ${blizzData.status}`);
+		alert(`Error Blizzard ${blizzData.status}`);
 		changeIsLoading(false);
 
 		return;
 	}
 	if (ioData.status !== 200) {
-		alert(`Error ${blizzData.status}`);
+		alert(`Error Raider IO ${ioData.status}`);
 		changeIsLoading(false);
 
 		return;
