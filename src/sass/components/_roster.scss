@@ -1,0 +1,191 @@
+@import "constants";
+
+.rosterPage {
+	text-align: center;
+	padding-bottom: 3em;
+	button {
+		padding: 0.25em 1.25em;
+		font-size: 1rem;
+		margin: 0 2em 1em;
+	}
+	.rosterHolder {
+		display: grid;
+		grid-template: auto / repeat(4, 1fr);
+		grid-gap: 1em;
+		max-width: 1000px;
+		margin: auto;
+		@media (max-width: $breakpoint+100) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@media (max-width: $breakpoint+(-200)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.rosterBox {
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			background-color: rgb(51, 51, 51);
+			border: 1px solid black;
+			border-radius: 0.5em;
+			&:hover {
+				border: 1px solid orange;
+				color: white;
+			}
+		}
+		.rosterBoxTop {
+			display: grid;
+			grid-template: auto / auto 1fr 1.5em;
+			padding: 0.5em;
+			max-height: 76px;
+			.rosterNameHolder {
+				text-align: left;
+				.rosterName {
+					font-weight: 600;
+					font-size: 1.5rem;
+				}
+				.rosterRank {
+					font-size: 1.1rem;
+					color: orange;
+				}
+			}
+			i {
+				&:hover {
+					color: orange;
+				}
+			}
+			.avatarHolder {
+				position: relative;
+				padding-right: 0.5em;
+				img {
+					background-color: rgb(29, 29, 29);
+					width: 55px;
+					height: 55px;
+					justify-self: end;
+					border-radius: 0.5em;
+				}
+				.countryFlag {
+					position: absolute;
+					width: 1.5em;
+					height: auto;
+					right: 0.5em;
+					bottom: 0;
+					background: none;
+				}
+			}
+
+			.rosterMedia {
+				display: flex;
+				flex-direction: column;
+				align-self: center;
+				justify-self: end;
+				font-size: 1.5em;
+			}
+		}
+
+		.characterHolder {
+			background-color: rgb(14, 14, 14);
+			display: grid;
+			width: 80%;
+			margin: 0 auto 1em;
+			padding: 0.5em 0;
+			align-items: start;
+			border-radius: 0.5em;
+			border: 1px solid rgb(14, 14, 14);
+			&:hover {
+				border: 1px solid orange;
+				color: white;
+			}
+			img {
+				width: 45px;
+				height: 45px;
+				align-self: center;
+				justify-self: end;
+				border-radius: 0.5em;
+			}
+
+			.characterData {
+				width: fit-content;
+				width: -moz-fit-content;
+				display: flex;
+				flex-direction: column;
+				height: fit-content;
+				margin-left: 0.5em;
+			}
+		}
+	}
+}
+
+.officerRosterSection {
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 0;
+	button {
+		padding: 0.25em 1.25em;
+		font-size: 1rem;
+		margin: 0 2em 1em;
+	}
+	.addMemberForm {
+		button {
+			margin-bottom: 0.5em;
+		}
+	}
+	.rosterAddForm {
+		width: fit-content;
+		width: $mozfit;
+		max-width: 1000px;
+		display: grid;
+		margin: auto;
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: end;
+		justify-content: center;
+		@media (max-width: $breakpoint+200) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $breakpoint+(-300)) {
+			grid-template-columns: auto;
+		}
+		label {
+			text-align: right;
+			width: 300px;
+			margin-bottom: 0.5em;
+		}
+		input,
+		select {
+			font-size: 1rem;
+			padding: 0.2em 0;
+			margin-left: 1em;
+			width: 177px;
+		}
+	}
+
+	.rosterAddCharacterForm {
+		width: fit-content;
+		width: $mozfit;
+		max-width: 1000px;
+		margin: 1em auto 0;
+		label {
+			text-align: right;
+			min-width: 300px;
+			margin-bottom: 0.5em;
+		}
+		input,
+		select {
+			font-size: 1rem;
+			padding: 0.2em 0;
+			margin: 0 1em;
+			width: 177px;
+		}
+		button {
+			margin-top: 0.5em;
+		}
+	}
+
+	.rosterDeleteForm {
+		select {
+			margin-left: 0.5em;
+			font-size: 1rem;
+			padding: 0.2em 0;
+			width: 177px;
+		}
+	}
+}

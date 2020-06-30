@@ -1,0 +1,68 @@
+@import "constants";
+
+.footer {
+	display: grid;
+	grid-template: auto / 33.33% 33.33% 33.33%;
+	margin: 0 auto 1em;
+	width: 100%;
+	padding: 1em 1em;
+	background-color: $primary-color;
+	border: $border;
+	border-radius: $border-radius;
+	align-items: center;
+
+	img {
+		max-width: 250px;
+		width: auto;
+		height: auto;
+		max-width: 120px;
+		justify-self: center;
+	}
+
+	.logOut {
+		text-align: right;
+		justify-self: end;
+		span,
+		button {
+			margin-right: 1em;
+		}
+		grid-row: span 2;
+	}
+	.footerLinks {
+		grid-row: span 2;
+	}
+	.form {
+		justify-self: end;
+		display: grid;
+		max-width: fit-content;
+		width: 80%;
+		grid-template: auto / auto auto auto;
+		text-align: center;
+		grid-row: span 2;
+		@media (max-width: $breakpoint+350) {
+			grid-template-columns: auto auto;
+		}
+		button {
+			justify-self: center;
+			align-self: end;
+			display: block;
+			width: auto;
+			padding: 0.25em 1.25em;
+			@media (max-width: $breakpoint+350) {
+				grid-column: span 2;
+			}
+		}
+		input {
+			width: 100px;
+			height: 2em;
+		}
+	}
+	.footerAbout {
+		width: fit-content;
+		width: $mozfit;
+		margin: auto;
+		span {
+			color: rgba(255, 255, 255, 0.479);
+		}
+	}
+}

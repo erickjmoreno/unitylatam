@@ -1,0 +1,13 @@
+@import "../components/constants";
+
+button {
+	cursor: pointer;
+	padding: 0.25em 1.25em;
+	background: white;
+	border: none;
+	border-radius: 0.5em;
+	&:hover {
+		background-color: $unity-color;
+		color: $unity-second-color;
+	}
+}

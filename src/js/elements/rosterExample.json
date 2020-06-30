@@ -1,0 +1,39 @@
+{
+	"core1": [
+		{
+			"avatar": "https://i.imgur.com/XGq5Evd.png",
+			"twitch": "https://twitch.tv/kreic",
+			"country": "Mexico",
+			"name": "Kreic",
+			"youtube": "https://www.youtube.com/channel/UC3eWbYxQCOuxx7TQwbeCePQ",
+			"characters": [
+				{
+					"lastmodified": 1592774318000,
+					"lastUpdate": 1592778015.2124107,
+					"realm": "Ragnaros",
+					"url": "https://www.warcraftlogs.com/character/id/20975868",
+					"equipment": {},
+					"level": 120,
+					"ilevel": 490,
+					"class": 1,
+					"mscore": 2221.6,
+					"name": "Aliras",
+					"avatar": "https://render-us.worldofwarcraft.com/character/ragnaros/106/171407466-avatar.jpg"
+				},
+				{
+					"lastmodified": 1592774318000,
+					"lastUpdate": 1592778015.2124107,
+					"realm": "Ragnaros",
+					"url": "https://www.warcraftlogs.com/character/id/20975868",
+					"equipment": {},
+					"level": 120,
+					"ilevel": 490,
+					"class": 1,
+					"mscore": 2221.6,
+					"name": "Aliras",
+					"avatar": "https://render-us.worldofwarcraft.com/character/ragnaros/106/171407466-avatar.jpg"
+				}
+			]
+		}
+	]
+}

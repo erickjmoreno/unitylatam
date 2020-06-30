@@ -1,0 +1,71 @@
+@import "constants";
+
+@font-face {
+	font-family: OpenSans;
+	src: url("../fonts/OpenSans-Regular.ttf");
+	font-weight: normal;
+	// src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+	font-family: OpenSans;
+	font-weight: 600;
+	src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+
+*,
+html {
+	box-sizing: border-box;
+}
+
+p {
+	font-size: 1rem;
+}
+html {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+body {
+	width: 100vw;
+	padding: 0;
+	margin: 0 auto;
+	min-height: 100vh;
+	color: white;
+	background-image: url("../images/shadowlandsBG.jpg");
+	background-repeat: no-repeat;
+	font-family: openSans;
+	background-attachment: scroll;
+	background-color: #1a1a1a;
+	background-position: center top;
+	overflow-y: scroll;
+}
+
+.content {
+	width: 80vw;
+	max-width: 1200px;
+	@media (max-width: $breakpoint) {
+		width: 95vw;
+	}
+	margin: auto;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		color: $unity-color;
+	}
+}
+
+button {
+	padding: 0.25em 1.25em;
+	font-size: 1rem;
+	margin: 1em 1em 0;
+}

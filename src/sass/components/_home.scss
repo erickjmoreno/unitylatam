@@ -1,0 +1,68 @@
+@import "constants";
+
+.home {
+	max-width: 1000px;
+	margin: auto;
+	padding: 0 1em;
+	display: grid;
+	grid-template: auto / 4fr 1fr;
+	column-gap: 1em;
+	@media (max-width: $breakpoint+200) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.adminForm {
+	margin: 0;
+	padding: 0;
+}
+
+.progressForm {
+	margin: 1em auto 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
+	div {
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		text-align: center;
+		button {
+			margin-bottom: 1em;
+		}
+	}
+
+	.raidDataForms {
+		grid-column: span 2;
+	}
+
+	@media (max-width: $breakpoint+200) {
+		display: flex;
+		flex-direction: column;
+		div {
+			margin-bottom: 1em;
+			border: none;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.342);
+		}
+	}
+}
+
+.expansionSwitch {
+	display: flex;
+	width: fit-content;
+	width: $mozfit;
+	margin: auto;
+	height: 100px;
+	margin-bottom: 0.5em;
+	img {
+		width: 100%;
+		margin: 0 0.5em;
+		height: auto;
+		object-fit: contain;
+		max-width: 150px;
+		opacity: 0.4;
+	}
+	.activeExpansion {
+		max-width: 200px;
+		opacity: 1;
+	}
+}

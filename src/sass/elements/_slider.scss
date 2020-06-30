@@ -1,0 +1,17 @@
+.slider {
+	grid-column: span 2;
+	overflow: hidden;
+	max-width: 1000px;
+	width: 100%;
+	margin: 1em auto 0;
+	max-height: 600px;
+	height: auto;
+	img {
+		margin: auto;
+		height: auto;
+		width: 100%;
+		&:focus {
+			outline: none;
+		}
+	}
+}

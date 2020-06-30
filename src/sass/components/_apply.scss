@@ -1,0 +1,112 @@
+@import "constants";
+
+.applyPage {
+	display: block;
+	height: fit-content;
+	h2,
+	h3 {
+		text-align: center;
+	}
+	.guildRules {
+		width: 100%;
+		max-width: 1000px;
+		background-color: rgb(31, 31, 31);
+		padding: 1em;
+		border-radius: 0.5em;
+		line-height: 1.8em;
+		margin: 1em auto;
+		@media (max-width: $breakpoint) {
+			padding: 0.5em;
+		}
+		p {
+			line-height: 2;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		h3 {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	form {
+		width: fit-content;
+		width: -moz-fit-content;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 80%;
+		max-width: 1000px;
+		@media (max-width: $breakpoint) {
+			display: flex;
+			flex-direction: column;
+		}
+		.buttonsHolder {
+			grid-column: span 3;
+			align-self: center;
+			justify-self: center;
+			button {
+				padding: 0.25em 1.25em;
+				margin: 1em;
+				font-size: 1rem;
+			}
+		}
+		label {
+			padding: 0 1em;
+			display: flex;
+			flex-direction: column;
+			margin: 0.2em 0;
+			input,
+			textarea {
+				font-size: 0.9rem;
+				height: 2em;
+				background-color: #333;
+				color: white;
+				min-width: 200px;
+				width: 100%;
+				margin-top: 0.3em;
+				border: 1px solid white;
+				border-radius: 0.3em;
+			}
+			textarea {
+				font-family: OpenSans;
+				height: 4em;
+			}
+		}
+		.short {
+			max-width: 1000px;
+		}
+		.large {
+			grid-column: span 3;
+			align-self: center;
+			max-width: 1000px;
+			width: 100%;
+		}
+
+		.radioLabel {
+			background-color: #333;
+			border-radius: 0.3em;
+			flex-direction: row;
+			align-items: flex-end;
+			.radioInput {
+				display: block;
+				min-width: 1em;
+				width: fit-content;
+				width: -moz-fit-content;
+				height: auto;
+				align-self: flex-start;
+			}
+		}
+	}
+
+	.coreSelectorButtons {
+		width: fit-content;
+		width: -moz-fit-content;
+		margin: auto;
+		button {
+			margin: 1em;
+			padding: 0.25em 1.25em;
+			font-size: 1.1rem;
+		}
+	}
+}

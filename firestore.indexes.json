@@ -1,0 +1,47 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "Characters",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "azeriteLvl",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "azeriteExp",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Characters",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "azeriteLvl",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "azeriteTotalExpEarned",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Characters",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "class",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nombre",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

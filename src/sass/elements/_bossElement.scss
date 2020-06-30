@@ -1,0 +1,77 @@
+.killDate {
+	position: absolute;
+	bottom: -0.5em;
+	font-size: 0.8em;
+	max-width: 60px;
+	width: 100%;
+	color: rgba(255, 255, 255, 0.774);
+	background-color: #212121;
+	padding: 1px;
+	border-radius: 4px;
+	font-weight: 400;
+}
+
+.bossBox {
+	max-width: 60px;
+	cursor: pointer;
+	max-height: 80px;
+	width: 100%;
+	height: 100%;
+	margin: 4px;
+	display: inline-block;
+	color: white;
+	position: relative;
+	transition: 1s ease;
+	border: 1px solid #212121;
+	&:hover {
+		border: 1px solid orange;
+	}
+	.tooltipTextHolder {
+		visibility: hidden;
+		width: 120px;
+		background-color: #212121;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;
+		position: absolute;
+		z-index: 1;
+		top: 80%;
+		left: 50%;
+		margin-left: -60px;
+		text-transform: capitalize;
+		border: 1px solid white;
+		.tooltipTextContent {
+			font-weight: 700;
+			font-family: "Open Sans", sans-serif;
+		}
+	}
+	.tooltipTextHolder::after {
+		content: " ";
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent transparent white transparent;
+	}
+	&:hover .tooltipTextHolder {
+		visibility: visible;
+		.bossBox:hover {
+			border: 1px solid orange;
+		}
+	}
+	.bossBoxImg {
+		border-radius: 0.5em;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.tiers {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 0.5em;
+}

@@ -1,0 +1,60 @@
+export const classList = {
+	1: "Warrior",
+	2: "Paladin",
+	3: "Hunter",
+	4: "Rogue",
+	5: "Priest",
+	6: "Death Knight",
+	7: "Shaman",
+	8: "Mage",
+	9: "Warlock",
+	10: "Monk",
+	11: "Druid",
+	12: "Demon Hunter",
+};
+
+export const classColors = {
+	1: "#C79C6E",
+	2: "#F58CBA",
+	3: "#A9D271",
+	4: "#FFF569",
+	5: "#FFFFFF",
+	6: "#C41F3B",
+	7: "#0070DE",
+	8: "#40C7EB",
+	9: "#8787ED",
+	10: "#00FF96",
+	11: "#FF7D0A",
+	12: "#A330C9",
+};
+
+export const classIcons = {
+	1: "https://gamepedia.cursecdn.com/wowpedia/3/37/Ui-charactercreate-classes_warrior.png?version=fb3d8e036c9276241b664519dbc83dd9",
+	2: "https://gamepedia.cursecdn.com/wowpedia/8/80/Ui-charactercreate-classes_paladin.png?version=e0b39e91e33337cf9b046b191b00ec94",
+	3: "https://gamepedia.cursecdn.com/wowpedia/4/4e/Ui-charactercreate-classes_hunter.png?version=8d5f500e3ae51e80b706fef6606d5f5d",
+	4: "https://gamepedia.cursecdn.com/wowpedia/b/b1/Ui-charactercreate-classes_rogue.png?version=16b7b785d2e6f6dc27f406f7cf76c796",
+	5: "https://gamepedia.cursecdn.com/wowpedia/0/0f/Ui-charactercreate-classes_priest.png?version=e15bbd31b34979102214dc9fb610da20",
+	6: "https://gamepedia.cursecdn.com/wowpedia/e/e5/Ui-charactercreate-classes_deathknight.png?version=bfd289d967c671e1025642c78770a0ae.jpg",
+	7: "https://gamepedia.cursecdn.com/wowpedia/3/3e/Ui-charactercreate-classes_shaman.png?version=fc828a5865b575db30eba5049e94aabc",
+	8: "https://gamepedia.cursecdn.com/wowpedia/5/56/Ui-charactercreate-classes_mage.png?version=a6c48fd2d52e3f7fa094a4c4b9e1e7ce",
+	9: "https://gamepedia.cursecdn.com/wowpedia/c/cf/Ui-charactercreate-classes_warlock.png?version=6d735addf7d9d560959c40584d2f5c2e",
+	10: "https://gamepedia.cursecdn.com/wowpedia/2/24/Ui-charactercreate-classes_monk.png?version=6d099661a0c7c061a7e839f0dcdbd359",
+	11: "https://gamepedia.cursecdn.com/wowpedia/6/6f/Ui-charactercreate-classes_druid.png?version=941d23903bae0df6a303e35f03b780bb",
+	12: "https://gamepedia.cursecdn.com/wowpedia/c/c9/Ui-charactercreate-classes_demonhunter.png?version=e1b42dd5c5033c2e786db444c5a7507e",
+};
+
+export const classIconsList = [
+	"https://gamepedia.cursecdn.com/wowpedia/9/97/Inv_misc_questionmark.png?version=f94fb4213b3b1ccf23bc53458b7090ea",
+	"https://gamepedia.cursecdn.com/wowpedia/3/37/Ui-charactercreate-classes_warrior.png?version=fb3d8e036c9276241b664519dbc83dd9",
+	"https://gamepedia.cursecdn.com/wowpedia/8/80/Ui-charactercreate-classes_paladin.png?version=e0b39e91e33337cf9b046b191b00ec94",
+	"https://gamepedia.cursecdn.com/wowpedia/4/4e/Ui-charactercreate-classes_hunter.png?version=8d5f500e3ae51e80b706fef6606d5f5d",
+	"https://gamepedia.cursecdn.com/wowpedia/b/b1/Ui-charactercreate-classes_rogue.png?version=16b7b785d2e6f6dc27f406f7cf76c796",
+	"https://gamepedia.cursecdn.com/wowpedia/0/0f/Ui-charactercreate-classes_priest.png?version=e15bbd31b34979102214dc9fb610da20",
+	"https://gamepedia.cursecdn.com/wowpedia/e/e5/Ui-charactercreate-classes_deathknight.png?version=bfd289d967c671e1025642c78770a0ae.jpg",
+	"https://gamepedia.cursecdn.com/wowpedia/3/3e/Ui-charactercreate-classes_shaman.png?version=fc828a5865b575db30eba5049e94aabc",
+	"https://gamepedia.cursecdn.com/wowpedia/5/56/Ui-charactercreate-classes_mage.png?version=a6c48fd2d52e3f7fa094a4c4b9e1e7ce",
+	"https://gamepedia.cursecdn.com/wowpedia/c/cf/Ui-charactercreate-classes_warlock.png?version=6d735addf7d9d560959c40584d2f5c2e",
+	"https://gamepedia.cursecdn.com/wowpedia/2/24/Ui-charactercreate-classes_monk.png?version=6d099661a0c7c061a7e839f0dcdbd359",
+	"https://gamepedia.cursecdn.com/wowpedia/6/6f/Ui-charactercreate-classes_druid.png?version=941d23903bae0df6a303e35f03b780bb",
+	"https://gamepedia.cursecdn.com/wowpedia/c/c9/Ui-charactercreate-classes_demonhunter.png?version=e1b42dd5c5033c2e786db444c5a7507e",
+];

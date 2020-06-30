@@ -1,0 +1,32 @@
+@import "../components/constants";
+
+.youTubeHolder {
+	grid-row: span 2;
+	.youTubeContent {
+		width: 100%;
+		height: fit-content;
+		height: $mozfit;
+		opacity: 0.8;
+		display: flex;
+		img {
+			cursor: pointer;
+			margin: auto;
+			width: 100%;
+			max-width: 190px;
+			max-height: 90px;
+			border: 1px solid rgb(31, 31, 31);
+			transition: 0.6s ease;
+			border-radius: 0.5em;
+			@media (max-width: $breakpoint+200) {
+				max-height: 100px;
+				object-fit: contain;
+			}
+			&:hover {
+				border: 1px solid orange;
+			}
+		}
+	}
+	@media (max-width: $breakpoint+200) {
+		display: flex;
+	}
+}

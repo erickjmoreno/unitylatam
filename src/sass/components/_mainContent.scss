@@ -1,0 +1,18 @@
+@import "constants";
+
+.mainContent {
+	background-color: $primary-color;
+	border-radius: $border-radius;
+	border: $border;
+	padding: 1em;
+	margin: 1em auto;
+	width: 100%;
+	-webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.mainContentAdmin {
+	@extend .mainContent;
+	margin: 1em auto 0;
+}
