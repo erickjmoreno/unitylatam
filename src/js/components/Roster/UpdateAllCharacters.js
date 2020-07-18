@@ -7,7 +7,10 @@ import getCharacterListAndNames from "../../utils/characterList";
 function UpdateAllCharactersButtons(props) {
 	const [isLoading, setIsLoading] = useState(false);
 	const { rosterData, core } = props.data;
-	const [currentProcess, setCurrentProcess] = useState("");
+	const [currentCharacter, setCurrentCharacter] = useState("");
+	const [currentPerson, setCurrentPerson] = useState("");
+	const [count, setCount] = useState(0);
+	const [amount, setAmount] = useState(0);
 
 	function changeIsLoading(status) {
 		setIsLoading(status);
@@ -15,7 +18,7 @@ function UpdateAllCharactersButtons(props) {
 
 	const updateCharacterData = async (char) => {
 		const { realm, name } = char;
-		setCurrentProcess(`Obteniendo información de: ${name}`);
+		setCurrentCharacter(`${name}`);
 		const updatedData = await getCharacterData({ characterRealm: realm, characterName: name });
 		return updatedData;
 	};
@@ -30,9 +33,15 @@ function UpdateAllCharactersButtons(props) {
 	};
 
 	const updatedRosterData = async (data) => {
+		const totalAmountOfPeople = data.length;
+		setAmount(totalAmountOfPeople);
+		let counter = 0;
 		let core = [];
 		for (let person of data) {
 			const updatedPersonData = await updatePersonData(person);
+			counter++;
+			setCount(counter);
+			setCurrentPerson(person.name);
 			core = [...core, updatedPersonData];
 		}
 		return core;
@@ -42,7 +51,8 @@ function UpdateAllCharactersButtons(props) {
 		setIsLoading(true);
 		const coreData = await updatedRosterData(rosterData[core]);
 		const feed = { ...rosterData, [core]: coreData };
-		setCurrentProcess(`Actualizando Información a la base de datos`);
+		setCurrentCharacter(`Actualizando Información a la base de datos`);
+		setCount(0);
 		rosterRef.update(feed);
 		setIsLoading(false);
 	}
@@ -50,7 +60,11 @@ function UpdateAllCharactersButtons(props) {
 	return (
 		<>
 			{isLoading ? (
-				<h3>{currentProcess}</h3>
+				<h3>
+					{Math.floor((count / amount) * 100)}%
+					<br />
+					{currentPerson} - {currentCharacter}
+				</h3>
 			) : (
 				<>
 					<h3> Actualizar </h3>
