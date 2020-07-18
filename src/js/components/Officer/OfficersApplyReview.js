@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { applysRef } from "../firebase/references";
-import Applys from "../components/Applys";
+import { applysRef } from "../../firebase/references";
+import Applys from "./Applys";
 
 function OfficersApplyReview(props) {
 	const [core, setCore] = useState(props.core);

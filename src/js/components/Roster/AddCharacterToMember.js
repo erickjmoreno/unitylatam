@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { rosterRef, webVersionRef } from "../firebase/references";
-import getCharacterData from "../utils/getCharacterData";
+import { rosterRef } from "../../firebase/references";
+import getCharacterData from "../../utils/getCharacterData";
+import { updateCharacterInDB } from "../../utils/updateCharacterDB";
 
-//export const rosterRef = firestore.collection("Unity").doc("roster");
 function AddCharacterToMember(props) {
 	const [isLoading, setIsLoading] = useState(false);
-	const [apiData, setApiData] = useState({});
 	const [formData, setFormData] = useState({
 		characterName: "",
 		characterRealm: "",
@@ -21,14 +20,17 @@ function AddCharacterToMember(props) {
 		setFormData({ ...formData, characterName: "" });
 	}
 
-	useEffect(() => {
-		webVersionRef.onSnapshot((doc) => setApiData(doc.data()));
-	}, []);
-
-	function handleSubmit(e) {
+	async function handleSubmit(e) {
 		e.preventDefault();
+		changeIsLoading(true);
 		if (!formData.memberName || !formData.characterRealm || !formData.characterName) return;
-		getCharacterData({ apiData, formData, rosterData, core, rosterRef, changeIsLoading, resetFormData, webVersionRef });
+		const characterData = await getCharacterData({
+			characterName: formData.characterName,
+			characterRealm: formData.characterRealm,
+		});
+		resetFormData();
+		if (characterData) updateCharacterInDB({ rosterData, core, rosterRef, formData }, characterData);
+		changeIsLoading(false);
 	}
 
 	function handleChange(e) {
@@ -45,7 +47,7 @@ function AddCharacterToMember(props) {
 				<h3>Cargando...</h3>
 			) : (
 				<form className="rosterAddCharacterForm" onSubmit={handleSubmit}>
-					<h3>Agregar personaje a miembro</h3>
+					<h3>Agregar personaje</h3>
 					{rosterData.edit}
 					<select name="edit" onChange={handleChange} name="memberName" value={formData.memberName}>
 						{editOptions()}

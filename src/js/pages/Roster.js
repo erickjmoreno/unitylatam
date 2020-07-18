@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../AuthContext";
-import RosterBox from "../components/RosterBox";
+import RosterBox from "../components/Roster/RosterBox";
 import { rosterRef } from "../firebase/references";
-import RosterCoreSwitcher from "../components/RosterCoreSwitcher";
-import RosterDisplayBySpecificClassButtons from "../elements/RosterDisplayBySpecificClassButtons";
-import FormNewPersonRoster from "../components/FormNewPersonRoster";
+import RosterCoreSwitcher from "../components/Roster/RosterCoreSwitcher";
+import RosterDisplayBySpecificClassButtons from "../components/Roster/RosterDisplayBySpecificClassButtons";
+import FormNewPersonRoster from "../components/Roster/FormNewPersonRoster";
 import sortByName from "../utils/sortByName";
 import addClassListToPerson from "../utils/addClassListToPerson";
 

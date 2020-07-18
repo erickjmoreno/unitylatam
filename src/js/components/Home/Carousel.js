@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { newsRef } from "../firebase/references";
+import { newsRef } from "../../firebase/references";
 import { CarouselProvider, Slider, Slide, Image } from "pure-react-carousel";
 
 function NewsSlider(props) {
@@ -24,7 +24,7 @@ function NewsSlider(props) {
 				interval={10000}
 				isPlaying={true}
 				isIntrinsicHeight={false}
-				dragEnabled={false}
+				dragEnabled={true}
 				touchEnabled={false}
 			>
 				<Slider>{data.map((newData, index) => newsComponents({ newData, index }))}</Slider>

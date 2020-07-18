@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CharacterBox from "./CharacterBox";
 import "remixicon/fonts/remixicon.css";
-import { countries } from "../elements/countryList";
-import { classIconsList } from "../elements/classList";
+import { countries } from "../../elements/countryList";
+import { classIconsList } from "../../elements/classList";
 
 function RosterBox(props) {
 	const [isActive, setIsActive] = useState(false);

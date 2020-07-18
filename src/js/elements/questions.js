@@ -120,6 +120,16 @@ const labels = [
 	},
 
 	{
+		name: "otherCharacters",
+		label: "Si la respuesta fue si, dinos que clases y especializaciones puedes utilizar además del principal. ",
+		officerString: "Otros Personajes",
+		type: "text",
+		required: false,
+		style: "large",
+		section: 1.5,
+	},
+
+	{
 		name: "screenshot",
 		label:
 			"Toma una captura de pantalla de tu interfaz de WoW mientras raideas e inserta el link (1) revisa que sea válido",

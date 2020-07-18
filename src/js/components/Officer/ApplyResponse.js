@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { rejectResponse, onWaitResponse } from "../elements/applyResponseTemplates";
-import { sendToMail } from "../firebase/references";
+import { rejectResponse, onWaitResponse } from "../../elements/applyResponseTemplates";
+import { sendToMail } from "../../firebase/references";
 
 function ApplyResponse(props) {
 	const [currentAnswer, setDefaultAnswer] = useState("");

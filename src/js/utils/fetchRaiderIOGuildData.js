@@ -42,6 +42,7 @@ async function fetchRaiderIOTOP5GuildsData({ progressData }) {
 	};
 	return guildsRanking;
 }
+
 async function fetchRaiderIOUnityData({ progressData }) {
 	const { currentTier, unityData: unityDataOld } = progressData;
 	const unityID = 9484;

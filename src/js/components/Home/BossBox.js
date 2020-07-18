@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ioDateFormat(x) {
 	var inx = x.indexOf("T");
@@ -10,10 +10,16 @@ function ioDateFormat(x) {
 
 function BossBox(props) {
 	const { rank, name, slug, date, tierSlug, generalAddress } = props.data;
+	const [imgSrc, setImgSrc] = useState(`${generalAddress}${tierSlug}/bossicons/${slug}.jpg`);
 	function handleClick(e, url) {
 		e.stopPropagation();
 		if (!url) return;
 		window.open(url, "_blank");
+	}
+	function onErrorHandler() {
+		const url =
+			"https://gamepedia.cursecdn.com/wowpedia/9/97/Inv_misc_questionmark.png?version=f94fb4213b3b1ccf23bc53458b7090ea";
+		setImgSrc(url);
 	}
 	return (
 		<div className="bossBox">
@@ -35,7 +41,7 @@ function BossBox(props) {
 			</div>
 			<div onClick={(e) => handleClick(e, rank.link)} className="bossPictureHolder">
 				<div className="bossFoto">
-					<img src={`${generalAddress}${tierSlug}/bossicons/${slug}.jpg`} className="bossBoxImg" draggable="false" />
+					<img src={imgSrc} className="bossBoxImg" draggable="false" onError={onErrorHandler} />
 				</div>
 				<div className="killDate">{date && ioDateFormat(date)}</div>
 			</div>

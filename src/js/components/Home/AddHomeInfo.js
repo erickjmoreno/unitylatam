@@ -3,8 +3,8 @@ import SubmitNewRaid from "./AddTierForm";
 import AddRaidBosses from "./AddRaidBosses";
 import ChangeCurrentTierForm from "./ChangeCurrentTierForm";
 import AddUnityDataForm from "./AddUnityDataForm";
-import Headerh3 from "./Headerh3";
-import { fetchRaiderIOTOP5GuildsData, fetchRaiderIOUnityData } from "../utils/fetchRaiderIOGuildData";
+import Headerh3 from "../../elements/Headerh3";
+
 import {
 	updateUnityData,
 	updateCurrentTier,
@@ -12,7 +12,7 @@ import {
 	submitNewRaid,
 	updateTOP5IOHandler,
 	updateUnityIOHandler,
-} from "../utils/progressUpdateFirestore";
+} from "../../utils/progressUpdateFirestore";
 
 function HomeAddInfo(props) {
 	const { progressData, progressRef, setProgressData } = props;

@@ -26,11 +26,11 @@ function LoginForm() {
 		<form onSubmit={handleSubmit} className="form">
 			<label>
 				Correo
-				<input type="text" name="email" onChange={handleChange} value={loginData.email}></input>
+				<input type="text" name="email" onChange={handleChange} value={loginData.email} />
 			</label>
 			<label>
 				Password
-				<input type="password" name="password" onChange={handleChange} value={loginData.password}></input>
+				<input type="password" name="password" onChange={handleChange} value={loginData.password} />
 			</label>
 			<button>Login</button>
 		</form>

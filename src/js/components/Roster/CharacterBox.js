@@ -1,5 +1,5 @@
 import React from "react";
-import { classList, classIcons, classColors } from "../elements/classList";
+import { classList, classIcons, classColors } from "../../elements/classList";
 
 function CharacterBox(props) {
 	const { data } = props;

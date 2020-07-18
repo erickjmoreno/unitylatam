@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import OfficersApplyReview from "../components/OfficersApplyReview";
+import OfficersApplyReview from "../components/Officer/OfficersApplyReview";
 import { AuthContext } from "../AuthContext";
 function Officers() {
 	const { isLoggedIn, userData } = useContext(AuthContext);

@@ -1,14 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
-import Progress from "../components/Progress";
-import YouTube from "../components/YouTube";
-import Top5 from "../components/Top5";
-import Carousel from "../components/Carousel";
-import UpdateButton from "../utils/updateDBNewStructure";
-import AddHomeInfo from "../components/AddHomeInfo";
-import AddToHomePage from "../components/AddToHomePage";
+import Progress from "../components/Home/Progress";
+import YouTube from "../components/Home/YouTube";
+import Top5 from "../components/Home/Top5";
+import Carousel from "../components/Home/Carousel";
+import AddHomeInfo from "../components/Home/AddHomeInfo";
+import AddToHomePage from "../components/Home/AddToHomePage";
 import { AuthContext } from "../AuthContext";
 import { rankRef, progressRef, newsRef, homePageRef } from "../firebase/references";
-import HomeSwitchByExpansion from "../components/HomeSwitchByExpansion";
+import HomeSwitchByExpansion from "../components/Home/HomeSwitchByExpansion";
 
 function Home() {
 	const { isLoggedIn } = useContext(AuthContext);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import applyObjectToString from "../utils/applyObjectToString";
+import applyObjectToString from "../../utils/applyObjectToString";
 import ApplyResponse from "./ApplyResponse";
 
 function Apply(props) {

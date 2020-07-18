@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useExpansion from "../hooks/expansion";
+import useExpansion from "../../hooks/expansion";
 
 const expansions = [
 	{

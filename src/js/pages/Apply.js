@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ApplyForm from "../components/ApplyForm";
+import ApplyForm from "../components/Applies/ApplyForm";
 import rules from "../elements/guildRules";
 
 function Apply() {

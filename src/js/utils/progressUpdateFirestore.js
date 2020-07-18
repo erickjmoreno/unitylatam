@@ -1,7 +1,9 @@
+import { progressRef } from "../firebase/references";
+import { fetchRaiderIOTOP5GuildsData, fetchRaiderIOUnityData } from "./fetchRaiderIOGuildData";
+
 async function updateToFirestore(payload) {
 	try {
 		await progressRef.update(payload);
-		alert("Se ha actualizado correctamente");
 	} catch {
 		alert("Ha ocurrido un error");
 	}

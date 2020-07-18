@@ -14,7 +14,6 @@ function AuthProvider({ children }) {
 	}
 
 	function logOut() {
-		console.log("here");
 		firebase.auth().signOut();
 	}
 

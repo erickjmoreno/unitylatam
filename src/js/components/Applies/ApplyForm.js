@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import questions from "../elements/questions";
-import inputs from "../utils/inputs";
-import { applysRef } from "../firebase/references";
+import questions from "../../elements/questions";
+import inputs from "../../utils/inputs";
+import { applysRef } from "../../firebase/references";
 
 function ApplyForm(props) {
 	const [formValues, setFormValues] = useState({});

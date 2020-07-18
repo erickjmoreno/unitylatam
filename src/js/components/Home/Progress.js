@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BossHistory from "./BossHistory";
-import useExpansion from "../hooks/expansion";
+import useExpansion from "../../hooks/expansion";
 
 function Progress({ progressData, expansion }) {
 	const { currentTier, raidBossesNames, unityData } = progressData;

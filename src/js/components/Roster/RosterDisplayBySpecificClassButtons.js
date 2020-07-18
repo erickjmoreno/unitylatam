@@ -1,5 +1,5 @@
 import React from "react";
-import { classIconsList } from "../elements/classList";
+import { classIconsList } from "../../elements/classList";
 
 function RosterDisplayBySpecificClassButtons(props) {
 	return (

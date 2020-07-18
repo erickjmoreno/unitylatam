@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { homePageRef } from "../firebase/references";
-import Headerh3 from "./Headerh3";
+import { homePageRef } from "../../firebase/references";
+import Headerh3 from "../../elements/Headerh3";
 
 function AddToHomePage(props) {
 	const { data: homePage } = props;

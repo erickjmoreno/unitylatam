@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { countries } from "../elements/countryList";
-import { deleteCharacterFromRoster, deleteFromRoster } from "../elements/DeleteFromRoster";
+import React, { useState, useEffect } from "react";
+import { countries } from "../../elements/countryList";
+import { deleteCharacterFromRoster, deleteFromRoster } from "../../elements/DeleteFromRoster";
 import AddMemberForm from "./AddMemberForm";
-import RosterDeleteMemberForm from "../elements/RosterDeleteMemberForm";
+import RosterDeleteMemberForm from "./RosterDeleteMemberForm";
 import AddCharacterToMember from "./AddCharacterToMember";
-import { removeUnusedData, template } from "../utils/rosterFormUtils";
-import sortByName from "../utils/sortByName";
+import { removeUnusedData, template } from "../../utils/rosterFormUtils";
+import sortByName from "../../utils/sortByName";
+import UpdateAllCharactersButtons from "./UpdateAllCharacters";
 
 function FormNewPersonRoster(props) {
 	const [isFormOn, setFormIsOn] = useState(false);
@@ -14,6 +15,7 @@ function FormNewPersonRoster(props) {
 	const [isRemoving, setIsRemoving] = useState(false);
 	const [personToRemove, setPersonToRemove] = useState("");
 	const [characterToRemove, setCharacterToRemove] = useState("");
+
 	const { setRosterData, rosterRef, rosterData } = props.data;
 
 	function toggleForm(isFormOn) {
@@ -156,7 +158,7 @@ function FormNewPersonRoster(props) {
 
 	return (
 		<div className="addMemberForm">
-			<button onClick={() => toggleForm(isFormOn)}>{!isFormOn ? "Agregar" : "Cerrar"}</button>
+			<button onClick={() => toggleForm(isFormOn)}>{!isFormOn ? "Herramientas" : "Cerrar"}</button>
 			<button onClick={() => toggleRemove(isRemoving)}>{!isRemoving ? "Borrar" : "Cerrar"}</button>
 			{!isReadyToSave && isRemoving && <RosterDeleteMemberForm data={propsForRosterDeleteMemberForm} />}
 			{isReadyToSave ? (
@@ -165,7 +167,8 @@ function FormNewPersonRoster(props) {
 				isFormOn && (
 					<>
 						<AddMemberForm data={propsForFormToAdd} />
-						<AddCharacterToMember data={{ rosterRef, rosterData, editOptions, core: formData.core }} />
+						<AddCharacterToMember data={{ rosterData, editOptions, core: formData.core }} />
+						<UpdateAllCharactersButtons data={{ rosterData, core: formData.core }} />
 					</>
 				)
 			)}
