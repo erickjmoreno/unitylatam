@@ -8,10 +8,13 @@ function Top5(props) {
 	const guildsRanking = expansionData.find((tiers) => tiers.slug === slug);
 	if (guildsRanking.rankings.length === 0)
 		return (
-			<h3 className="top5Waiting">
-				En espera del primer kill de <span style={{ color: "orange" }}>{slug.replace(new RegExp("-", "g"), " ")}</span>{" "}
-				Mythic de la región
-			</h3>
+			<div>
+				<h3 style={{ textAlign: "center" }}>Top 5 Latinoamerica</h3>
+				<h3 className="top5Waiting">
+					En espera del primer kill de{" "}
+					<span style={{ color: "orange" }}>{slug.replace(new RegExp("-", "g"), " ")}</span>
+				</h3>
+			</div>
 		);
 	function guildBox(guild) {
 		const { encountersDefeated, name, rank, realm, regionRank, region, id } = guild;

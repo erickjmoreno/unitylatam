@@ -150,6 +150,10 @@ export async function updateTOP5IOHandler(data) {
 
 export async function updateUnityIOHandler(data) {
 	const { progressData } = data;
-	const unityData = await fetchRaiderIOUnityData({ progressData });
-	updateToFirestore({ unityData });
+	try {
+		const unityData = await fetchRaiderIOUnityData({ progressData });
+		if (unityData) updateToFirestore({ unityData });
+	} catch (error) {
+		console.error(error);
+	}
 }

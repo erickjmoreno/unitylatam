@@ -168,7 +168,7 @@ function FormNewPersonRoster(props) {
 					<>
 						<AddMemberForm data={propsForFormToAdd} />
 						<AddCharacterToMember data={{ rosterData, editOptions, core: formData.core }} />
-						<UpdateAllCharactersButtons data={{ rosterData, core: formData.core }} />
+						{/* <UpdateAllCharactersButtons data={{ rosterData, core: formData.core }} /> */}
 					</>
 				)
 			)}

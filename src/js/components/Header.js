@@ -23,6 +23,9 @@ function Header() {
 					<Link to="/Roster">
 						<h2>Roster</h2>
 					</Link>
+					<Link to="/Guides">
+						<h2>Guias</h2>
+					</Link>
 					{isLoggedIn && (
 						<>
 							<Link to="/Officers">

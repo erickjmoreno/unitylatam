@@ -1,8 +1,6 @@
 import firebase from "./firebase.js";
 import firestore from "./firestore.js";
 
-const _ = null;
-
 export function toggleSignIn({ email, password }) {
 	if (firebase.auth().currentUser) {
 		firebase.auth().signOut();

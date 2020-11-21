@@ -1,4 +1,4 @@
-export default function sortByName(a, b) {
+export default function sortByNameWithRankOrder(a, b) {
 	const aRankOrder = a.rankOrder || 0;
 	const bRankOrder = b.rankOrder || 0;
 

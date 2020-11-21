@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from "react";
 import { rosterRef } from "../../firebase/references";
 import getCharacterData from "../../utils/getCharacterData";
 import { updateCharacterInDB } from "../../utils/updateCharacterDB";
-import getCharacterListAndNames from "../../utils/characterList";
 
 function UpdateAllCharactersButtons(props) {
 	const [isLoading, setIsLoading] = useState(false);

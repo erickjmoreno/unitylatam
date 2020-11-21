@@ -56,7 +56,10 @@ function UpdateButton(props) {
 		currentTier,
 		guildsRanking,
 		unityData: {
-			shadowlands: [],
+			shadowlands: {
+				raids: test,
+				tiers: [...tierOrder],
+			},
 			battleForAzeroth: {
 				raids: test,
 				tiers: [...tierOrder],

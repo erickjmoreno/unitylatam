@@ -19,7 +19,7 @@ const labels = [
 	},
 	{
 		name: "characterName",
-		label: "Nombre de personaje",
+		label: "Nombre, clase y spec de personaje",
 		officerString: "Personaje",
 		type: "text",
 		required: true,
@@ -64,7 +64,7 @@ const labels = [
 	},
 	{
 		name: "wowArmory",
-		label: "Link de tu Armory de WoW",
+		label: "Link de tu Armory de WoW, un (1) link valido, o no podremos verlo",
 		officerString: "Armory",
 		type: "text",
 		required: true,
@@ -141,7 +141,7 @@ const labels = [
 	},
 	{
 		name: "POV",
-		label: "Si cuentas con un PoV de alguna pelea, copia el enlace",
+		label: "Si cuentas con un PoV de alguna pelea, copia el enlace, un link (1) valido, o no podremos verlo",
 		officerString: "PoV",
 		type: "text",
 		required: false,
@@ -150,7 +150,7 @@ const labels = [
 	},
 	{
 		name: "warcraftLogs",
-		label: "Coloca tu enlace de WarcraftLogs",
+		label: "Coloca tu enlace de WarcraftLogs, un link (1) valido, o no podremos verlo",
 		officerString: "WarcraftLogs",
 		type: "text",
 		required: true,

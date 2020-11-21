@@ -9,7 +9,7 @@ function ioDateFormat(x) {
 }
 
 function BossBox(props) {
-	const { rank, name, slug, date, tierSlug, generalAddress } = props.data;
+	const { rank, name, slug, date, tierSlug, generalAddress, killed } = props.data;
 	const [imgSrc, setImgSrc] = useState(`${generalAddress}${tierSlug}/bossicons/${slug}.jpg`);
 	function handleClick(e, url) {
 		e.stopPropagation();
@@ -21,29 +21,32 @@ function BossBox(props) {
 			"https://gamepedia.cursecdn.com/wowpedia/9/97/Inv_misc_questionmark.png?version=f94fb4213b3b1ccf23bc53458b7090ea";
 		setImgSrc(url);
 	}
+
 	return (
-		<div className="bossBox">
-			<div className="tooltipTextHolder">
-				<span className="tooltipTextContent">{name}</span>
-				<br />
-				{!!rank.world && (
-					<span>
-						World: {rank.world} <br />
-					</span>
-				)}
-				{!!rank.latino && (
-					<span>
-						Latino: {rank.latino}
-						<br />
-					</span>
-				)}
-				{!!rank.tries && <span> Tries: {rank.tries} </span>}
-			</div>
+		<div className={`bossBox ${killed ? "" : "disabled"}`}>
+			{killed ? (
+				<div className="tooltipTextHolder">
+					<span className="tooltipTextContent">{name}</span>
+					<br />
+					{!!rank.world && (
+						<span>
+							World: {rank.world} <br />
+						</span>
+					)}
+					{!!rank.latino && (
+						<span>
+							Latino: {rank.latino}
+							<br />
+						</span>
+					)}
+					{!!rank.tries && <span> Tries: {rank.tries} </span>}
+				</div>
+			) : null}
 			<div onClick={(e) => handleClick(e, rank.link)} className="bossPictureHolder">
 				<div className="bossFoto">
 					<img src={imgSrc} className="bossBoxImg" draggable="false" onError={onErrorHandler} />
 				</div>
-				<div className="killDate">{date && ioDateFormat(date)}</div>
+				{killed ? <div className="killDate">{date && ioDateFormat(date)}</div> : null}
 			</div>
 		</div>
 	);

@@ -69,6 +69,11 @@
 	}
 }
 
+.disabled {
+	filter: grayscale(100%);
+	border: none;
+}
+
 .tiers {
 	display: flex;
 	flex-direction: row;

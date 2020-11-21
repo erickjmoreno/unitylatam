@@ -8,7 +8,8 @@ import Apply from "./pages/Apply";
 import AboutUS from "./pages/AboutUS";
 import Officers from "./pages/Officers";
 import Roster from "./pages/Roster";
-import AdminPage from "./pages/AdminPage";
+import Guides from "./pages/Guides";
+// import AdminPage from "./pages/AdminPage";
 
 function App() {
 	return (
@@ -31,6 +32,10 @@ function App() {
 					<Route path="/Roster">
 						<Roster />
 					</Route>
+					<Route path="/Guides">
+						<Guides />
+					</Route>
+
 					{/* <Route path="/Admin">
 						<AdminPage />
 					</Route> */}

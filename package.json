@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack-dev-server --open --mode development",
-		"build": "webpack --mode production"
+		"build": "webpack --mode production",
+		"test": "jest --config ./jest.config.json"
 	},
 	"keywords": [],
 	"author": "",
@@ -15,6 +16,7 @@
 		"@babel/plugin-transform-runtime": "^7.10.1",
 		"@babel/preset-env": "^7.10.2",
 		"@babel/preset-react": "^7.10.1",
+		"@testing-library/react": "^10.4.7",
 		"autoprefixer": "^9.8.0",
 		"babel-loader": "^8.1.0",
 		"css-loader": "^3.6.0",
@@ -22,6 +24,7 @@
 		"file-loader": "^6.0.0",
 		"html-loader": "^1.1.0",
 		"html-webpack-plugin": "^4.3.0",
+		"jest": "^26.1.0",
 		"mini-css-extract-plugin": "^0.9.0",
 		"minimist": "^1.2.5",
 		"postcss-loader": "^3.0.0",
@@ -33,7 +36,8 @@
 	},
 	"dependencies": {
 		"@babel/runtime": "^7.10.2",
-		"firebase": "^7.15.2",
+		"firebase": "^8.0.0",
+		"html-to-react": "^1.4.5",
 		"is-url": "^1.2.4",
 		"pure-react-carousel": "^1.27.1",
 		"react": "^16.13.1",

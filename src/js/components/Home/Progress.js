@@ -6,6 +6,10 @@ function Progress({ progressData, expansion }) {
 	const { currentTier, raidBossesNames, unityData } = progressData;
 	const { expansion: currentExpansion } = currentTier;
 
+	if (!unityData)
+		return (
+			<h3 style={{ textAlign: "center", color: "orange", fontSize: "2em" }}>Nos encontramos en mantenimiento {":3"}</h3>
+		);
 	const tierList = [...unityData[expansion].tiers] || [];
 
 	if (tierList.length === 0) {

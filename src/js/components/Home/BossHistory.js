@@ -9,6 +9,7 @@ function BossHistory(props) {
 
 	const killedBosses = tierSorted.map(({ slug, data }, i) => {
 		const date = data[0];
+		const killed = data[1];
 		const rank = {
 			link: data[2],
 			tries: data[3],
@@ -17,7 +18,7 @@ function BossHistory(props) {
 		};
 
 		const name = slug.replace(new RegExp("-", "g"), " ");
-		return <BossBox key={`${slug}`} data={{ rank, name, slug, date, tierSlug, generalAddress }} />;
+		return <BossBox key={`${slug}`} data={{ rank, name, slug, date, tierSlug, generalAddress, killed }} />;
 	});
 
 	return killedBosses;

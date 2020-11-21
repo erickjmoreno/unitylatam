@@ -53,9 +53,10 @@ function checkEndPointResponseIs200({ status }, characterName) {
 async function getIconFromUrl(url) {
 	const access_token = await checkAccessToken();
 	const access_token_string = `&access_token=${access_token}`;
-	const characterIconData = await fetch(url + access_token_string);
+	const characterIconData = await fetch(url.toLowerCase() + access_token_string);
 	const characterIconDataJSON = await characterIconData.json();
-	return characterIconDataJSON.avatar_url;
+	const { value } = characterIconDataJSON?.assets.find((data) => data.key === "avatar");
+	return value;
 }
 
 export default async function getCharacterData(args) {
@@ -78,7 +79,7 @@ export default async function getCharacterData(args) {
 		class: blizzDataJSON.character_class.id,
 		name: blizzDataJSON.name,
 		realm: blizzDataJSON.realm.name,
-		avatar: icon,
+		avatar: icon || "",
 		level: blizzDataJSON.level,
 		ilevel: blizzDataJSON.equipped_item_level,
 		mscore: ioDataJSON.mythic_plus_scores.all || 0,

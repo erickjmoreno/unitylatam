@@ -48,18 +48,25 @@ async function fetchRaiderIOUnityData({ progressData }) {
 	const unityID = 9484;
 	const url = `https://raider.io/api/v1/raiding/raid-rankings?raid=${currentTier.slug}&difficulty=mythic&region=us-spanish&guilds=${unityID}`;
 	const unityIOData = await fetch(url);
+
 	if (unityIOData.status !== 200) {
 		console.log(unityIOData.status);
 		return null;
 	}
 	const unityIODataJSON = await unityIOData.json();
 
+	// console.log(url);
+	// console.log(unityIODataJSON);
+	// const newRaidData = unityIODataJSON.raidRankings[0]?.encountersDefeated.map((encounter) => {
+	// 	return { slug: encounter.slug, data: [encounter.firstDefeated, true, "", "", "", "1"] };
+	// });
+
 	const newRaidData = unityDataOld[currentTier.expansion].raids[currentTier.slug].raid.map((boss) => {
-		const encountersData = unityIODataJSON.raidRankings[0].encountersDefeated.find(
+		const encountersData = unityIODataJSON.raidRankings[0]?.encountersDefeated.find(
 			(encounter) => encounter.slug == boss.slug
 		);
-		boss.data[0] = encountersData.firstDefeated || "";
-		boss.data[1] = !!encountersData.firstDefeated || false;
+		boss.data[0] = encountersData?.firstDefeated || "";
+		boss.data[1] = !!encountersData?.firstDefeated || false;
 		return boss;
 	});
 
