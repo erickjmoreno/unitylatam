@@ -55,8 +55,13 @@ async function getIconFromUrl(url) {
 	const access_token_string = `&access_token=${access_token}`;
 	const characterIconData = await fetch(url.toLowerCase() + access_token_string);
 	const characterIconDataJSON = await characterIconData.json();
-	const { value } = characterIconDataJSON?.assets.find((data) => data.key === "avatar");
-	return value;
+	if (characterIconDataJSON.hasOwnProperty("assets")) {
+		const { value } = characterIconDataJSON?.assets?.find((data) => data.key === "avatar");
+		return value;
+	} else {
+		const { avatar_url } = characterIconDataJSON;
+		return avatar_url;
+	}
 }
 
 export default async function getCharacterData(args) {
