@@ -3,6 +3,8 @@
 UnityLatam is a web developed to track the progress of Unity - Ragnaros Guild from the game World of Warcraft
 Has been in development for the past 4 years, with changes to it's funcionality, appeareance and started using React two years ago.
 
+To visit the site go to https://unitylatam.com/
+
 ## Getting Started
 
 To install this project you will need an account in Google Firebase
@@ -59,6 +61,13 @@ firebase deploy --only hosting
 
 - [Firebase](https://firebase.google.com/docs/guides) - The hosting, auth and functions provider
 - [React](https://reactjs.org/) - Framework used
+
+## Screenshots
+
+![ss1](./src/images/ss1.png)
+![ss2](./src/images/ss2.png)
+![ss3](./src/images/ss3.png)
+![ss4](./src/images/ss4.png)
 
 ## Authors
 
