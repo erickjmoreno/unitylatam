@@ -1,7 +1,8 @@
 # Unity Latam
 
 UnityLatam is a web developed to track the progress of Unity - Ragnaros Guild from the game World of Warcraft
-Has been in development for the past 4 years, with changes to it's funcionality, appeareance and started using React two years ago.
+
+The Site has been in development for the past 4 years, with changes to it's funcionality, appeareance and started using React two years ago.
 
 To visit the site go to https://unitylatam.com/
 
