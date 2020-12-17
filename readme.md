@@ -1,6 +1,7 @@
 # Project Title
 
 UnityLatam is a web developed to track the progress of Unity - Ragnaros Guild from the game World of Warcraft
+Has been in development for the past 4 years, with changes to it's funcionality, appeareance and started using React two years ago.
 
 ## Getting Started
 
@@ -12,6 +13,7 @@ To get the env running you will need
 
 ```
 git clone https://erickjmoreno@bitbucket.org/erickjmoreno/unitylatam.git
+git clone giturl
 ```
 
 ```

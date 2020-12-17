@@ -6,7 +6,7 @@ import Carousel from "../components/Home/Carousel";
 import AddHomeInfo from "../components/Home/AddHomeInfo";
 import AddToHomePage from "../components/Home/AddToHomePage";
 import { AuthContext } from "../AuthContext";
-import { rankRef, progressRef, newsRef, homePageRef } from "../firebase/references";
+import { progressRef, homePageRef } from "../firebase/references";
 import HomeSwitchByExpansion from "../components/Home/HomeSwitchByExpansion";
 
 function Home() {

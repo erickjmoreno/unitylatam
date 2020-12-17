@@ -34,8 +34,13 @@ function RosterBox(props) {
 						draggable={false}
 					/>
 					{data.country ? (
-						<img className="countryFlag" src={`https://www.countryflags.io/${countryKey}/flat/32.png`} alt="country" />
-					) : null}
+						<img
+							className="countryFlag"
+							src={`https://raw.githubusercontent.com/worlddb/world.db.flags/master/vendor/assets/images/flags/32x32/${countryKey.toLowerCase()}.png`}
+							alt="flag"
+						/>
+					) : // <img className="countryFlag" src={`https://www.countryflags.io/${countryKey}/flat/32.png`} alt="country" />
+					null}
 				</div>
 				<div className="rosterNameHolder">
 					<span className="rosterName">{data.name}</span>
